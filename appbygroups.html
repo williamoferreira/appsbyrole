@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lnag="pt-br">
+    <head>
+        <title>Age Technology - Aplicativos por grupos</title>
+        <meta charset="utf8">
+        <meta name="charset" value="utf8">
+        <style>
+
+            * {
+                font-family : "segoe Ui";
+            }
+            
+            .conteudo {
+                margin: 0 auto;
+                max-width: 100%;
+                width: 1024px;
+              
+            }
+            header {
+                display: flex;
+                border: solid 1px grey;
+                justify-content: stretch;
+                text-align: center;
+                font-weight: 600;
+            }
+            
+            header > div {
+                border: solid 1px grey;
+                padding: 6pt;
+            }
+            
+            #tabRow input[type="radio"] {
+                display: none;
+            }
+            #tabRow{
+                margin: 12pt 12pt 0 12pt;
+                
+            }
+            
+            #tabRow label {
+                background-color: #efefef;
+                padding: 6pt 12pt;
+                border-radius: 4px 4px 0px 0px;
+                cursor: pointer;
+            }
+            
+            #tabRow label > .selectedTab {
+                border-top: solid 2px #47a5ae;
+            }
+            
+            .grupos {
+                padding: 6pt;
+                margin: 6pt;
+                
+                border-radius: 4px;
+                background-color: #efefef;
+            }
+            
+            .nomeGrupo {
+                background-color: #47a5ae;
+                display: flex;
+                justify-content: space-between;
+                padding: 6pt;
+                border-radius: 4px;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+            }
+            
+            .nomeGrupo button {
+                background-color: #fbba00;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                font-weight: 700;
+            }
+            
+            .gerenciaVisivel {
+                display: block;
+            }
+            
+            section {
+                display: none;
+            }
+            
+            .aplicacoesInvisivel {
+                display: none;
+            }
+            
+            .aplicacoesVisivel {
+                display: block ;
+            }
+            
+            .aplicacoesVisivel div {
+                padding: 6pt;
+            }
+            
+            footer {
+                margin-top: 12pt;
+            }
+            .linhaRodape {
+                font-family: courier; 
+                border-bottom: solid 1px grey;
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            .linhaRodape:last-child{
+                border-bottom: none;
+            }
+                    
+        </style>
+    </head>
+    <body>
+        <article class="conteudo">
+            <header>
+                <div id="logo"><img src=".\logoage.jpg"></div>
+                <div id="detalhes">
+                    <div id="Departamento">DEPARTAMENTO DE DESENVOLVIMENTO<br/>TECNOLOGIA DA INFORMAÇÃO</div>
+                    <div id="Titulo">Gestão de permissão de acessos aos aplicativos empresariais</div>
+                </div>
+                <div id="versionamento">
+                    <div id="Codigo">M-DEV-XXX</div>
+                    <div id="Revisao">Regisão: 01.01</div>
+                </div>
+            </header>
+            <div id="tabRow">
+                <label for="adm" class="selectedTab" onclick="toggleTab(this)">ADM</label>
+                <label for="dev" onclick="toggleTab(this)">DEV</label>
+                <label for="rn" onclick="toggleTab(this)">R&N</label>                
+            </div>
+            <section id="adm" class="gerenciaVisivel" >
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>Adm - Contas a Pagar</div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div> Docusign - SSO</div>
+                        <div> AGE SOC - SSO</div>
+                        <div> Sistema TOTVS</div>
+                        <div> Office 365 SOC</div>
+                        <div> PortGo</div>
+                        <div> Amazon - Financeiro</div>
+                        <div> Bancos</div>
+                        <div> CIEE</div>
+                        <div> CPFL</div>
+                        <div> Portal VIVO</div>
+                        <div> Alelo</div>
+                        <div> Arquivo Express</div>
+                        <div> AWS - AGE_BILLING</div>
+                        <div> SOC - Financeiro</div>
+                        <div> Maestro Contas a Pagar</div>                                         
+                    </div>
+                </div>
+
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>Adm - Contas a Receber </div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div> Docusign - SSO</div>
+                        <div> AGE SOC - SSO</div>
+                        <div> Sistema TOTVS</div>
+                        <div> Office 365 SOC</div>
+                        <div> PortGo</div>
+                        <div> GINFES</div>
+                        <div> Arquivo Express</div>
+                        <div> TopDesk - helpdesk Comercial/Financeiro</div>
+                        <div> SOC - Financeiro</div>
+                        <div> Maestro Faturamento</div>                                        
+                    </div>
+                </div>
+
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>Adm - Gerencia </div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div> Docusign - SSO</div>
+                        <div> AGE SOC - SSO</div>
+                        <div> Sistema TOTVS</div>
+                        <div> PortGo</div>
+                        <div> GINFES</div>
+                        <div> Mercado Eletrônico</div>
+                        <div> Portal do Cliente TOTVS</div>
+                        <div> Bancos</div>
+                        <div> CIEE</div>
+                        <div> CPFL</div>
+                        <div> Portal BNDES</div>
+                        <div> Portal VIVO</div>
+                        <div> Serasa</div>
+                        <div> Alelo</div>
+                        <div> Linkedin - Admin</div>
+                        <div> MetLife MyBenefits</div>
+                        <div> Piracicabana</div>
+                        <div> Sodexo</div>
+                        <div> Translitoral</div>
+                        <div> ZKAcess Security System</div>
+                        <div> Compras Governamentais</div>
+                        <div> Arquivo Express</div>
+                        <div> AWS - AGE_BILLING</div>
+                        <div> SOC - Financeiro</div>
+                        <div> Maestro Administrativo/Financeiro - Gestor</div>                                       
+                    </div>
+                </div>
+            </section>
+
+            <section id="dev">
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>Dev - ArqOps </div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div>Atlassian Cloud</div>
+                        <div>New Relic</div>
+                        <div>Jira Cloud</div>
+                        <div>Docusign - SSO</div>
+                        <div>P-SOC - SSO</div>
+                        <div>AGE SOC - SSO</div>
+                        <div>Alfred</div>
+                        <div>MySQL - Desenvolvedor (BSOC)</div>
+                        <div>Code Commit</div>
+                        <div>Office 365 SOC</div>
+                        <div>PortGo</div>
+                        <div>Amazon (Conta Maketec)</div>
+                        <div>Confluence</div>
+                        <div>Jenkins (SSO)</div>
+                        <div>SOC - Perfil Padrão</div>
+                        <div>Amazon (Conta Agesec)</div>
+                        <div>New Relic (SSO)</div>
+                        <div>New Relic (Conta Paga)</div>
+                        <div>Kibana (SSO)</div>
+                        <div>AWS Control Tower</div>
+                    </div>
+                </div>
+
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>Dev - ArqOps - Arquitetura </div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div>AWS Control Tower</div>
+                        <div>AWS - AGE_DEVOPS_PRD</div>
+                        <div>Jira - Users</div>
+                        <div>Maestro ArqOps - Arquitetura</div>
+                        <div>AWS Control Tower</div>
+                        <div>AWS - AGE_MONITORAMENTO</div>
+                        <div>Jira - Users</div>
+                        <div>Maestro ArqOps - Monitoramento</div>
+                                                             
+                    </div>
+                </div>
+
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>Dev - ArqOps - Operacao </div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div>AWS Control Tower</div>
+                        <div>AWS - AGE_OPERACAO</div>
+                        <div>Jira - Users</div>
+                        <div>Maestro ArqOps - Operação</div>                                                              
+                    </div>
+                </div>
+            </section>
+
+            <section id="rn">
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>RN - Comunicação </div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div>Docusign - SSO</div>
+                        <div>AGE SOC - SSO</div>
+                        <div>HubSpot</div>
+                        <div>Office 365 SOC</div>
+                        <div>PortGo</div>
+                        <div>Linkedin - Recruiter</div>
+                        <div>Facebook</div>
+                        <div>Freepik</div>
+                        <div>Google Analytics</div>
+                        <div>mLabs</div>
+                        <div>Rock Content</div>
+                        <div>Twitter</div>
+                        <div>SOC - Perfil Padrão</div>
+                        <div>SOC Blog</div>
+                        <div>Hubspot - Marketing</div>
+                        <div>Maestro Comunicação - Conteúdo</div>
+                        <div>Alura - users</div>
+                    </div>
+                </div>
+
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>RN - Comunicação-Lider</div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div>Hubspot - Gestores</div>
+                        <div>TopDesk - Maketing/Imagens</div>
+                        <div>Maestro Comunicação - Líder</div>
+                    </div>
+                </div>
+
+                <div class="grupos">
+                    <div class="nomeGrupo" onclick="collapseItens(this)">
+                        <div>RN - Consultoria </div>
+                    </div>
+                    <div class="aplicacoesInvisivel">
+                        <div>Jira Cloud</div>
+                        <div>Docusign - SSO</div>
+                        <div>Power BI</div>
+                        <div>P-SOC - SSO</div>
+                        <div>AGE SOC - SSO</div>
+                        <div>Office 365 SOC</div>
+                        <div>PortGo</div>
+                        <div>Bizagi Offline</div>
+                        <div>SOC - Perfil Padrão</div>
+                        <div>Maestro - Consultoria</div>
+                        <div>Alura - users</div>                                                                                 
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <div class="linhaRodape">
+                    <div>Elaboração: Tecnologia da Informação</div>
+                    <div>Aprovação: Peter Silva</div>
+                </div>
+                <div class="linhaRodape">
+                    <div>Classificação: Sensível</div>
+                    <div>Data: 15/10/2021</div>
+                </div>
+            </footer>
+        </article>
+        <script>
+            var collapseItens = function(sender) {
+                
+                parentDiv = sender.parentNode;
+                listItens = parentDiv.childNodes[3];                
+                console.log(listItens);
+                if (listItens.classList.contains("aplicacoesInvisivel")) {
+                    listItens.classList.remove("aplicacoesInvisivel");
+                    listItens.classList.add("aplicacoesVisivel");
+                    console.log("painel exibido");
+                } else {
+                    listItens.classList.remove("aplicacoesVisivel");
+                    listItens.classList.add("aplicacoesInvisivel");
+                    console.log("painel ocultado");
+                }
+            }
+
+            var toggleTab = function(sender) {
+                if (!(sender.classList.contains("selecteTad"))) {
+
+                    tabRow = sender.parentNode;                      
+                    for (var i = 0; i < tabRow.children.length ; i++) {
+                        tabRow.children[i].classList.remove("selecteTad");
+                    }
+                    sender.classList.add("selecteTad");
+
+                    grupoGerencias = document.getElementsByTagName("section");
+                    for (var i = 0; i < grupoGerencias.length; i++) {
+                        grupoGerencias[i].classList.remove("gerenciaVisivel");
+                    }
+
+                    switch(sender.htmlFor) {
+                        case "adm" :
+                            grupoGerencias[0].classList.add("gerenciaVisivel");
+                            break;
+                        case "dev" :
+                            grupoGerencias[1].classList.add("gerenciaVisivel");
+                            break;
+                        case "rn" :
+                            grupoGerencias[2].classList.add("gerenciaVisivel");
+                            break;
+                        default:
+                            console.log(grupoGerencias);
+                    }
+
+                    
+                }
+            }
+        </script>
+    </body>
+</html>
