@@ -5,7 +5,6 @@
         <meta charset="utf8">
         <meta name="charset" value="utf8">
         <style>
-
             * {
                 font-family : "segoe Ui";
             }
@@ -14,27 +13,51 @@
                 margin: 0 auto;
                 max-width: 100%;
                 width: 1024px;
-              
+                
             }
             header {
                 display: flex;
                 border: solid 1px grey;
                 justify-content: stretch;
                 text-align: center;
+                flex-direction: row;
                 font-weight: 600;
+                /*! flex-grow: 1; */
             }
             
             header > div {
                 border: solid 1px grey;
+                flex-grow: 1;
+            }
+            
+            #versionamento div {
+                height: 50%;
                 padding: 6pt;
+                box-sizing: border-box;
+            }
+            
+            #versionamento div:last-child {
+                border-top: solid 2px grey;
+            }
+            
+            #logo {
+                padding: 6pt;
+                align-items: center;
+            }
+            
+            #detalhes div {
+                padding: 6pt;
+            }
+            
+            #detalhes div:last-child {
+                border-top: solid 2px grey;
             }
             
             #tabRow input[type="radio"] {
                 display: none;
             }
             #tabRow{
-                margin: 12pt 12pt 0 12pt;
-                
+                margin: 12pt 12pt 0 12pt;    
             }
             
             #tabRow label {
@@ -48,10 +71,13 @@
                 border-top: solid 2px #47a5ae;
             }
             
+            #detalhes {
+                flex-grow: 1;
+            }
+            
             .grupos {
                 padding: 6pt;
-                margin: 6pt;
-                
+                margin: 6pt;    
                 border-radius: 4px;
                 background-color: #efefef;
             }
@@ -108,8 +134,7 @@
             .linhaRodape:last-child{
                 border-bottom: none;
             }
-                    
-        </style>
+</style>
     </head>
     <body>
         <article class="conteudo">
@@ -121,7 +146,7 @@
                 </div>
                 <div id="versionamento">
                     <div id="Codigo">M-DEV-XXX</div>
-                    <div id="Revisao">Regisão: 01.01</div>
+                    <div id="Revisao">Revisão: 01.01</div>
                 </div>
             </header>
             <div id="tabRow">
@@ -375,9 +400,7 @@
                             break;
                         default:
                             console.log(grupoGerencias);
-                    }
-
-                    
+                    }                    
                 }
             }
         </script>
