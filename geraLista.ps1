@@ -201,13 +201,14 @@ $htmlContent = '<!DOCTYPE html>
             }
 
             var toggleTab = function(sender) {
-                if (!(sender.classList.contains("selectedTad"))) {
+                if (!(sender.classList.contains("selectedTab"))) {
 
                     tabRow = sender.parentNode;                      
                     for (var i = 0; i < tabRow.children.length ; i++) {
-                        tabRow.children[i].classList.remove("selectedTad");
+                        tabRow.children[i].classList.remove("selectedTab");
                     }
-                    sender.classList.add("selectedTad");
+                    sender.classList.add("selectedTab");
+                    console.log(sender);
 
                     grupoGerencias = document.getElementsByTagName("section");
                     for (var i = 0; i < grupoGerencias.length; i++) {
